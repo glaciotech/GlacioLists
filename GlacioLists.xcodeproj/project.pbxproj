@@ -22,6 +22,7 @@
 		AEC4AE2329A43A93004FD7BD /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC4AE2129A43A93004FD7BD /* ListView.swift */; };
 		AEC4AE2629A51A75004FD7BD /* GlacioSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AEC4AE2529A51A75004FD7BD /* GlacioSwift */; };
 		AEC4AE2829A51D36004FD7BD /* RealmChangeObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC4AE2729A51D36004FD7BD /* RealmChangeObserver.swift */; };
+		AEC4AE2A29A52E6B004FD7BD /* GlacioNodeObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC4AE2929A52E6B004FD7BD /* GlacioNodeObserver.swift */; };
 		FCA9337DCD0A5FE705DE5354 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = FCA933F97055E030E3F5F995 /* .gitignore */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		AEC4AE1E29A43921004FD7BD /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
 		AEC4AE2129A43A93004FD7BD /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		AEC4AE2729A51D36004FD7BD /* RealmChangeObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmChangeObserver.swift; sourceTree = "<group>"; };
+		AEC4AE2929A52E6B004FD7BD /* GlacioNodeObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlacioNodeObserver.swift; sourceTree = "<group>"; };
 		FCA933F97055E030E3F5F995 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = file.gitignore; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,6 +122,7 @@
 				AEC4AE1E29A43921004FD7BD /* ListItem.swift */,
 				AEC4AE2129A43A93004FD7BD /* ListView.swift */,
 				AEC4AE2729A51D36004FD7BD /* RealmChangeObserver.swift */,
+				AEC4AE2929A52E6B004FD7BD /* GlacioNodeObserver.swift */,
 			);
 			path = GlacioLists;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 			files = (
 				AEC4AE2229A43A93004FD7BD /* ListView.swift in Sources */,
 				AEC4AE1F29A43921004FD7BD /* ListItem.swift in Sources */,
+				AEC4AE2A29A52E6B004FD7BD /* GlacioNodeObserver.swift in Sources */,
 				AEC4ADF129A4370C004FD7BD /* ContentView.swift in Sources */,
 				AEC4ADEF29A4370C004FD7BD /* GlacioListsApp.swift in Sources */,
 				AEC4AE2829A51D36004FD7BD /* RealmChangeObserver.swift in Sources */,

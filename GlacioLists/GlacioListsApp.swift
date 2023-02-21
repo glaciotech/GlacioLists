@@ -19,11 +19,15 @@ struct GlacioListsApp: SwiftUI.App {
     
     let realmObserver: RealmChangeObserver
     
+    let glacioObserver: GlacioNodeObserver
+    
     init() {
         
         do {
             nodeManager = try NodeManager(seedNodes: [])
             try nodeManager.node.addChain(chainId: GlacioListConstants.chainId)
+            
+            glacioObserver = GlacioNodeObserver(node: nodeManager.node, realm: realm)
             
             guard let dApp = nodeManager.node.app(appType: RealmChangeDApp.self) else {
                 fatalError("Can't continue as cannot get an instance of Realm DApp")
