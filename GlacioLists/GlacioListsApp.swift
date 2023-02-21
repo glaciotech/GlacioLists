@@ -23,17 +23,36 @@ struct GlacioListsApp: SwiftUI.App {
     
     init() {
         
+        let seedNode = UserDefaults.standard.string(forKey: "seedNode")
+        let chaindir = UserDefaults.standard.string(forKey: "chaindir")
+        let port = UInt16(UserDefaults.standard.integer(forKey: "port"))
+        
         do {
-            nodeManager = try NodeManager(seedNodes: [])
+            
+            let seedNodes = seedNode != nil ? [seedNode!] : []
+            
+            nodeManager = try NodeManager(chaindir: chaindir ?? "main", port: port, seedNodes: seedNodes)
+            
             try nodeManager.node.addChain(chainId: GlacioListConstants.chainId)
             
             glacioObserver = GlacioNodeObserver(node: nodeManager.node, realm: realm)
+            try glacioObserver.createNodeObservers()
             
             guard let dApp = nodeManager.node.app(appType: RealmChangeDApp.self) else {
                 fatalError("Can't continue as cannot get an instance of Realm DApp")
             }
             realmObserver = RealmChangeObserver(realm: realm, realmDApp: dApp)
             realmObserver.createAndStartObservers()
+            
+            nodeManager.seedNodesRegisteredCallback = { [self] in
+                
+                do {
+                    try nodeManager.node.sync(full: true, chainId: GlacioListConstants.chainId)
+                }
+                catch {
+                    print(error)
+                }
+            }
         }
         catch {
             fatalError("Fatal error stating app: \(error)")
