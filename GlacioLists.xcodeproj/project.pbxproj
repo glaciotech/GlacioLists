@@ -20,6 +20,8 @@
 		AEC4AE2029A43921004FD7BD /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC4AE1E29A43921004FD7BD /* ListItem.swift */; };
 		AEC4AE2229A43A93004FD7BD /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC4AE2129A43A93004FD7BD /* ListView.swift */; };
 		AEC4AE2329A43A93004FD7BD /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC4AE2129A43A93004FD7BD /* ListView.swift */; };
+		AEC4AE2629A51A75004FD7BD /* GlacioSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AEC4AE2529A51A75004FD7BD /* GlacioSwift */; };
+		AEC4AE2829A51D36004FD7BD /* RealmChangeObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC4AE2729A51D36004FD7BD /* RealmChangeObserver.swift */; };
 		FCA9337DCD0A5FE705DE5354 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = FCA933F97055E030E3F5F995 /* .gitignore */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +56,7 @@
 		AEC4AE0C29A4370E004FD7BD /* GlacioListsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlacioListsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		AEC4AE1E29A43921004FD7BD /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
 		AEC4AE2129A43A93004FD7BD /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		AEC4AE2729A51D36004FD7BD /* RealmChangeObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmChangeObserver.swift; sourceTree = "<group>"; };
 		FCA933F97055E030E3F5F995 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = file.gitignore; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,6 +66,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEC4AE1D29A43852004FD7BD /* RealmSwift in Frameworks */,
+				AEC4AE2629A51A75004FD7BD /* GlacioSwift in Frameworks */,
 				AEC4AE1B29A43852004FD7BD /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -115,6 +119,7 @@
 				AEC4ADF529A4370E004FD7BD /* Preview Content */,
 				AEC4AE1E29A43921004FD7BD /* ListItem.swift */,
 				AEC4AE2129A43A93004FD7BD /* ListView.swift */,
+				AEC4AE2729A51D36004FD7BD /* RealmChangeObserver.swift */,
 			);
 			path = GlacioLists;
 			sourceTree = "<group>";
@@ -163,6 +168,7 @@
 			packageProductDependencies = (
 				AEC4AE1A29A43852004FD7BD /* Realm */,
 				AEC4AE1C29A43852004FD7BD /* RealmSwift */,
+				AEC4AE2529A51A75004FD7BD /* GlacioSwift */,
 			);
 			productName = GlacioLists;
 			productReference = AEC4ADEB29A4370C004FD7BD /* GlacioLists.app */;
@@ -238,6 +244,7 @@
 			mainGroup = AEC4ADE229A4370C004FD7BD;
 			packageReferences = (
 				AEC4AE1929A43852004FD7BD /* XCRemoteSwiftPackageReference "realm-swift" */,
+				AEC4AE2429A51A75004FD7BD /* XCRemoteSwiftPackageReference "GlacioSwift" */,
 			);
 			productRefGroup = AEC4ADEC29A4370C004FD7BD /* Products */;
 			projectDirPath = "";
@@ -286,6 +293,7 @@
 				AEC4AE1F29A43921004FD7BD /* ListItem.swift in Sources */,
 				AEC4ADF129A4370C004FD7BD /* ContentView.swift in Sources */,
 				AEC4ADEF29A4370C004FD7BD /* GlacioListsApp.swift in Sources */,
+				AEC4AE2829A51D36004FD7BD /* RealmChangeObserver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -649,6 +657,14 @@
 				minimumVersion = 10.0.0;
 			};
 		};
+		AEC4AE2429A51A75004FD7BD /* XCRemoteSwiftPackageReference "GlacioSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/glaciotech/GlacioSwift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -661,6 +677,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AEC4AE1929A43852004FD7BD /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
+		};
+		AEC4AE2529A51A75004FD7BD /* GlacioSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AEC4AE2429A51A75004FD7BD /* XCRemoteSwiftPackageReference "GlacioSwift" */;
+			productName = GlacioSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
