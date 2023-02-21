@@ -14,6 +14,13 @@
 		AEC4AE0129A4370E004FD7BD /* GlacioListsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC4AE0029A4370E004FD7BD /* GlacioListsTests.swift */; };
 		AEC4AE0B29A4370E004FD7BD /* GlacioListsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC4AE0A29A4370E004FD7BD /* GlacioListsUITests.swift */; };
 		AEC4AE0D29A4370E004FD7BD /* GlacioListsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC4AE0C29A4370E004FD7BD /* GlacioListsUITestsLaunchTests.swift */; };
+		AEC4AE1B29A43852004FD7BD /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = AEC4AE1A29A43852004FD7BD /* Realm */; };
+		AEC4AE1D29A43852004FD7BD /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AEC4AE1C29A43852004FD7BD /* RealmSwift */; };
+		AEC4AE1F29A43921004FD7BD /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC4AE1E29A43921004FD7BD /* ListItem.swift */; };
+		AEC4AE2029A43921004FD7BD /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC4AE1E29A43921004FD7BD /* ListItem.swift */; };
+		AEC4AE2229A43A93004FD7BD /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC4AE2129A43A93004FD7BD /* ListView.swift */; };
+		AEC4AE2329A43A93004FD7BD /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC4AE2129A43A93004FD7BD /* ListView.swift */; };
+		FCA9337DCD0A5FE705DE5354 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = FCA933F97055E030E3F5F995 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +52,9 @@
 		AEC4AE0629A4370E004FD7BD /* GlacioListsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GlacioListsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEC4AE0A29A4370E004FD7BD /* GlacioListsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlacioListsUITests.swift; sourceTree = "<group>"; };
 		AEC4AE0C29A4370E004FD7BD /* GlacioListsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlacioListsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AEC4AE1E29A43921004FD7BD /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
+		AEC4AE2129A43A93004FD7BD /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		FCA933F97055E030E3F5F995 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = file.gitignore; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +62,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEC4AE1D29A43852004FD7BD /* RealmSwift in Frameworks */,
+				AEC4AE1B29A43852004FD7BD /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +91,7 @@
 				AEC4ADFF29A4370E004FD7BD /* GlacioListsTests */,
 				AEC4AE0929A4370E004FD7BD /* GlacioListsUITests */,
 				AEC4ADEC29A4370C004FD7BD /* Products */,
+				FCA933F97055E030E3F5F995 /* .gitignore */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +113,8 @@
 				AEC4ADF229A4370E004FD7BD /* Assets.xcassets */,
 				AEC4ADF429A4370E004FD7BD /* GlacioLists.entitlements */,
 				AEC4ADF529A4370E004FD7BD /* Preview Content */,
+				AEC4AE1E29A43921004FD7BD /* ListItem.swift */,
+				AEC4AE2129A43A93004FD7BD /* ListView.swift */,
 			);
 			path = GlacioLists;
 			sourceTree = "<group>";
@@ -145,6 +160,10 @@
 			dependencies = (
 			);
 			name = GlacioLists;
+			packageProductDependencies = (
+				AEC4AE1A29A43852004FD7BD /* Realm */,
+				AEC4AE1C29A43852004FD7BD /* RealmSwift */,
+			);
 			productName = GlacioLists;
 			productReference = AEC4ADEB29A4370C004FD7BD /* GlacioLists.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +236,9 @@
 				Base,
 			);
 			mainGroup = AEC4ADE229A4370C004FD7BD;
+			packageReferences = (
+				AEC4AE1929A43852004FD7BD /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = AEC4ADEC29A4370C004FD7BD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -235,6 +257,7 @@
 			files = (
 				AEC4ADF729A4370E004FD7BD /* Preview Assets.xcassets in Resources */,
 				AEC4ADF329A4370E004FD7BD /* Assets.xcassets in Resources */,
+				FCA9337DCD0A5FE705DE5354 /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +282,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEC4AE2229A43A93004FD7BD /* ListView.swift in Sources */,
+				AEC4AE1F29A43921004FD7BD /* ListItem.swift in Sources */,
 				AEC4ADF129A4370C004FD7BD /* ContentView.swift in Sources */,
 				AEC4ADEF29A4370C004FD7BD /* GlacioListsApp.swift in Sources */,
 			);
@@ -268,7 +293,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEC4AE2029A43921004FD7BD /* ListItem.swift in Sources */,
 				AEC4AE0129A4370E004FD7BD /* GlacioListsTests.swift in Sources */,
+				AEC4AE2329A43A93004FD7BD /* ListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -612,6 +639,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AEC4AE1929A43852004FD7BD /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AEC4AE1A29A43852004FD7BD /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AEC4AE1929A43852004FD7BD /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		AEC4AE1C29A43852004FD7BD /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AEC4AE1929A43852004FD7BD /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AEC4ADE329A4370C004FD7BD /* Project object */;
 }
