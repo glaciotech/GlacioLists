@@ -31,6 +31,12 @@ class GlacioNodeObserver: NodeWatcher, ObservableObject {
         self.node = node
         self.realm = realm
         self.dApp = node.app(appType: RealmChangeDApp.self)!
+        
+        node.eventCenter.register(event: .chainStatusUpdate, object: self) { eResult in
+            guard let result = eResult as? ChainStatusUpdate else { return }
+            print("Chain \(result.chainId) updated")
+            self.chainStatus = "\(result.status)"
+        }
     }
     
     func createNodeObservers() throws {

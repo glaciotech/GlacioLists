@@ -63,6 +63,7 @@ struct GlacioListsApp: SwiftUI.App {
         WindowGroup {
             ContentView()
                 .environment(\.realm, realm)
+                .environmentObject(glacioObserver)
         }
     }
 }
