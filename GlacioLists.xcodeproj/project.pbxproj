@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AE8A0C8C29C2630D00B59D3E /* GlacioSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AE8A0C8B29C2630D00B59D3E /* GlacioSwift */; };
+		AE36321529BBE2860036E51A /* GlacioSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AE36321429BBE2860036E51A /* GlacioSwift */; };
 		AEC4ADEF29A4370C004FD7BD /* GlacioListsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC4ADEE29A4370C004FD7BD /* GlacioListsApp.swift */; };
 		AEC4ADF129A4370C004FD7BD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC4ADF029A4370C004FD7BD /* ContentView.swift */; };
 		AEC4ADF329A4370E004FD7BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEC4ADF229A4370E004FD7BD /* Assets.xcassets */; };
@@ -42,7 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		AE8A0C8929C262D900B59D3E /* GlacioSwift */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = GlacioSwift; path = ../../GlacioSwift; sourceTree = "<group>"; };
+		AE36321329BBE27C0036E51A /* GlacioSwift */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = GlacioSwift; path = ../../GlacioSwift; sourceTree = "<group>"; };
 		AEC4ADEB29A4370C004FD7BD /* GlacioLists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GlacioLists.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEC4ADEE29A4370C004FD7BD /* GlacioListsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlacioListsApp.swift; sourceTree = "<group>"; };
 		AEC4ADF029A4370C004FD7BD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +56,7 @@
 		AEC4AE0C29A4370E004FD7BD /* GlacioListsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlacioListsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		AEC4AE1E29A43921004FD7BD /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
 		AEC4AE2129A43A93004FD7BD /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		AEC4AE2C29A69636004FD7BD /* GlacioSwift */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = GlacioSwift; path = ../../GlacioSwift; sourceTree = "<group>"; };
 		FCA933F97055E030E3F5F995 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = file.gitignore; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,7 +66,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEC4AE1D29A43852004FD7BD /* RealmSwift in Frameworks */,
-				AE8A0C8C29C2630D00B59D3E /* GlacioSwift in Frameworks */,
+				AE36321529BBE2860036E51A /* GlacioSwift in Frameworks */,
 				AEC4AE1B29A43852004FD7BD /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,31 +88,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AE8A0C8829C262D900B59D3E /* Packages */ = {
-			isa = PBXGroup;
-			children = (
-				AE8A0C8929C262D900B59D3E /* GlacioSwift */,
-			);
-			name = Packages;
-			sourceTree = "<group>";
-		};
-		AE8A0C8A29C2630D00B59D3E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		AEC4ADE229A4370C004FD7BD = {
 			isa = PBXGroup;
 			children = (
-				AE8A0C8829C262D900B59D3E /* Packages */,
+				AEC4AE2B29A69636004FD7BD /* Packages */,
 				AEC4ADED29A4370C004FD7BD /* GlacioLists */,
 				AEC4ADFF29A4370E004FD7BD /* GlacioListsTests */,
 				AEC4AE0929A4370E004FD7BD /* GlacioListsUITests */,
 				AEC4ADEC29A4370C004FD7BD /* Products */,
 				FCA933F97055E030E3F5F995 /* .gitignore */,
-				AE8A0C8A29C2630D00B59D3E /* Frameworks */,
+				AEC4AE2D29A6A03A004FD7BD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -164,6 +150,22 @@
 			path = GlacioListsUITests;
 			sourceTree = "<group>";
 		};
+		AEC4AE2B29A69636004FD7BD /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				AEC4AE2C29A69636004FD7BD /* GlacioSwift */,
+				AE36321329BBE27C0036E51A /* GlacioSwift */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		AEC4AE2D29A6A03A004FD7BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -183,7 +185,7 @@
 			packageProductDependencies = (
 				AEC4AE1A29A43852004FD7BD /* Realm */,
 				AEC4AE1C29A43852004FD7BD /* RealmSwift */,
-				AE8A0C8B29C2630D00B59D3E /* GlacioSwift */,
+				AE36321429BBE2860036E51A /* GlacioSwift */,
 			);
 			productName = GlacioLists;
 			productReference = AEC4ADEB29A4370C004FD7BD /* GlacioLists.app */;
@@ -522,6 +524,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = glaciotech.GlacioLists;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REALM_DISABLE_ANALYTICS = YES;
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -673,7 +676,7 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		AE8A0C8B29C2630D00B59D3E /* GlacioSwift */ = {
+		AE36321429BBE2860036E51A /* GlacioSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = GlacioSwift;
 		};

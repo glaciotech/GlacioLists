@@ -25,10 +25,20 @@ struct GlacioListsApp: SwiftUI.App {
 
     init() {
         
-        do {
+        let seedNode = UserDefaults.standard.string(forKey: "seedNode")
+        let chainDirPath = UserDefaults.standard.string(forKey: "chaindir") ?? "main"
+        let port = UInt16(UserDefaults.standard.integer(forKey: "port"))
 
-            self.nodeManager = try NodeManager(developerId: developerId)
-            self.realm = try Realm(configuration: Realm.Configuration(inMemoryIdentifier: "glaciolistdata", deleteRealmIfMigrationNeeded: true)) // We use ! here as if realm can't initialize our app won't work
+        let discoveryServiceAddress = UserDefaults.standard.string(forKey: "discoveryAddress")
+        let disableDiscoverability = UserDefaults.standard.bool(forKey: "disableDiscoverability")
+
+        do {
+            let seedNodes = seedNode != nil ? [seedNode!] : []
+
+            let discAddr = disableDiscoverability ? nil : discoveryServiceAddress // If discovery service disabled set to nil to disable it on NodeManager
+
+            self.nodeManager = try NodeManager(developerId: developerId, chaindir: chainDirPath, port: port, seedNodes: seedNodes, discoverabilityServiceAddress: discAddr)
+            self.realm = try Realm(configuration: Realm.Configuration(inMemoryIdentifier: "glaciolistdata-\(chainDirPath)", deleteRealmIfMigrationNeeded: true)) // We use ! here as if realm can't initialize our app won't work
 
             self.glacioCoordinator = try GlacioRealmCoordinator(realm: realm, nodeManager: nodeManager, objectsToMonitor: [ListItem.self])
 
@@ -42,7 +52,7 @@ struct GlacioListsApp: SwiftUI.App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView(chainId: glacioCoupler.chainId)
+            ContentView(chainId: glacioCoordinator.chainId)
                 .environment(\.realm, realm)
                 .environmentObject(nodeInfoModel)
                 .environmentObject(debugModel)
