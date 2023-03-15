@@ -8,8 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var chainId: String
+    
     var body: some View {
         VStack {
+            Text(chainId)
             ListView()
         }
         .padding()
@@ -18,6 +22,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(chainId: "Test-Chain")
     }
 }

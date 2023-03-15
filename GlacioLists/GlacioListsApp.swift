@@ -35,7 +35,7 @@ struct GlacioListsApp: SwiftUI.App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(chainId: glacioCoupler.chainId)
                 .environment(\.realm, realm)
         }
     }
