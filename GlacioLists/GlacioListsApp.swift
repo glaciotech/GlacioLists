@@ -20,6 +20,7 @@ struct GlacioListsApp: SwiftUI.App {
     #error("Add developerId here. Can be obtained from Glacio portal - DELETE THIS LINE BEFORE RUNNING")
     let developerId = ""
 
+    let debugModel: DebugModel
     let nodeInfoModel: NodeInfoModel
 
     init() {
@@ -32,6 +33,7 @@ struct GlacioListsApp: SwiftUI.App {
             self.glacioCoordinator = try GlacioRealmCoordinator(realm: realm, nodeManager: nodeManager, objectsToMonitor: [ListItem.self])
 
             self.nodeInfoModel = NodeInfoModel(node: nodeManager.node)
+            self.debugModel = DebugModel(node: nodeManager.node)
         }
         catch {
             fatalError("Fatal error starting app: \(error)")
@@ -43,6 +45,7 @@ struct GlacioListsApp: SwiftUI.App {
             ContentView(chainId: glacioCoupler.chainId)
                 .environment(\.realm, realm)
                 .environmentObject(nodeInfoModel)
+                .environmentObject(debugModel)
         }
     }
 }
