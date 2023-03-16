@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import GlacioSwift
 
 struct ContentView: View {
     
@@ -14,6 +15,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Text(chainId)
+            NodeInfoView()
             ListView()
         }
         .padding()
