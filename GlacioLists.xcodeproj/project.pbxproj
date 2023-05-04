@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AE36321529BBE2860036E51A /* GlacioSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AE36321429BBE2860036E51A /* GlacioSwift */; };
+		AE15791229F708C700C7E6CF /* GlacioSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AE15791129F708C700C7E6CF /* GlacioSwift */; };
 		AEC4ADEF29A4370C004FD7BD /* GlacioListsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC4ADEE29A4370C004FD7BD /* GlacioListsApp.swift */; };
 		AEC4ADF129A4370C004FD7BD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC4ADF029A4370C004FD7BD /* ContentView.swift */; };
 		AEC4ADF329A4370E004FD7BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEC4ADF229A4370E004FD7BD /* Assets.xcassets */; };
@@ -42,7 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		AE36321329BBE27C0036E51A /* GlacioSwift */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = GlacioSwift; path = ../../GlacioSwift; sourceTree = "<group>"; };
+		AE15791029F7077B00C7E6CF /* GlacioSwift */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = GlacioSwift; path = ../../GlacioSwift; sourceTree = "<group>"; };
 		AEC4ADEB29A4370C004FD7BD /* GlacioLists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GlacioLists.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEC4ADEE29A4370C004FD7BD /* GlacioListsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlacioListsApp.swift; sourceTree = "<group>"; };
 		AEC4ADF029A4370C004FD7BD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,7 +56,6 @@
 		AEC4AE0C29A4370E004FD7BD /* GlacioListsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlacioListsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		AEC4AE1E29A43921004FD7BD /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
 		AEC4AE2129A43A93004FD7BD /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
-		AEC4AE2C29A69636004FD7BD /* GlacioSwift */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = GlacioSwift; path = ../../GlacioSwift; sourceTree = "<group>"; };
 		FCA933F97055E030E3F5F995 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = file.gitignore; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,7 +65,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEC4AE1D29A43852004FD7BD /* RealmSwift in Frameworks */,
-				AE36321529BBE2860036E51A /* GlacioSwift in Frameworks */,
+				AE15791229F708C700C7E6CF /* GlacioSwift in Frameworks */,
 				AEC4AE1B29A43852004FD7BD /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -153,8 +152,7 @@
 		AEC4AE2B29A69636004FD7BD /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				AEC4AE2C29A69636004FD7BD /* GlacioSwift */,
-				AE36321329BBE27C0036E51A /* GlacioSwift */,
+				AE15791029F7077B00C7E6CF /* GlacioSwift */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -185,7 +183,7 @@
 			packageProductDependencies = (
 				AEC4AE1A29A43852004FD7BD /* Realm */,
 				AEC4AE1C29A43852004FD7BD /* RealmSwift */,
-				AE36321429BBE2860036E51A /* GlacioSwift */,
+				AE15791129F708C700C7E6CF /* GlacioSwift */,
 			);
 			productName = GlacioLists;
 			productReference = AEC4ADEB29A4370C004FD7BD /* GlacioLists.app */;
@@ -380,6 +378,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -400,7 +399,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG LINUXTESTING ENABLE_NIO_ONLY";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -438,6 +437,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -451,6 +451,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
@@ -462,8 +463,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = GlacioLists/GlacioLists.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"GlacioLists/Preview Content\"";
 				DEVELOPMENT_TEAM = 9QTWJ837VC;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -484,10 +487,12 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.6;
 				MARKETING_VERSION = 1.0;
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = glaciotech.GlacioLists;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG LINUXTESTING_OFF";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -500,8 +505,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = GlacioLists/GlacioLists.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"GlacioLists/Preview Content\"";
 				DEVELOPMENT_TEAM = 9QTWJ837VC;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -522,6 +529,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.6;
 				MARKETING_VERSION = 1.0;
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = glaciotech.GlacioLists;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REALM_DISABLE_ANALYTICS = YES;
@@ -540,6 +548,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 9QTWJ837VC;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
@@ -563,6 +572,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 9QTWJ837VC;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
@@ -585,6 +595,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 9QTWJ837VC;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
@@ -607,6 +618,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 9QTWJ837VC;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
@@ -676,7 +688,7 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		AE36321429BBE2860036E51A /* GlacioSwift */ = {
+		AE15791129F708C700C7E6CF /* GlacioSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = GlacioSwift;
 		};

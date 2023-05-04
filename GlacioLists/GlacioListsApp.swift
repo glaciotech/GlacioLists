@@ -10,6 +10,14 @@ import RealmSwift
 import GlacioSwift
 import GlacioCore
 
+#if LINUXTESTING
+#warning("Linux testing is enabled")
+#endif
+
+#if ENABLE_NIO_ONLY
+#warning("SwiftNIO is enabled instead of Apple Networking")
+#endif
+
 @main
 struct GlacioListsApp: SwiftUI.App {
     
@@ -23,6 +31,9 @@ struct GlacioListsApp: SwiftUI.App {
     let debugModel: DebugModel
     let nodeInfoModel: NodeInfoModel
 
+    let chainId = GlacioConstants.defaultChain
+    let glacioConfig: GlacioConfiguration
+    
     init() {
         
         let seedNode = UserDefaults.standard.string(forKey: "seedNode")
@@ -32,12 +43,17 @@ struct GlacioListsApp: SwiftUI.App {
         let discoveryServiceAddress = UserDefaults.standard.string(forKey: "discoveryAddress")
         let disableDiscoverability = UserDefaults.standard.bool(forKey: "disableDiscoverability")
 
+        let seedNodes = seedNode != nil ? [seedNode!] : []
+
+        let discAddr = disableDiscoverability ? nil : discoveryServiceAddress // If discovery service disabled set to nil to disable it on NodeManager
+
+        let forceProxying = false
+        let enableP2P = true
+
+        glacioConfig = GlacioConfiguration(chainDirPath: chainDirPath, port: port, seedNodes: seedNodes, discoverabilityServiceAddress: discAddr, proxyAllConnections: forceProxying, enableProxyRegistration: true, disablePeer2PeerConnections: !enableP2P)
+
         do {
-            let seedNodes = seedNode != nil ? [seedNode!] : []
-
-            let discAddr = disableDiscoverability ? nil : discoveryServiceAddress // If discovery service disabled set to nil to disable it on NodeManager
-
-            self.nodeManager = try NodeManager(developerId: developerId, chaindir: chainDirPath, port: port, seedNodes: seedNodes, discoverabilityServiceAddress: discAddr)
+            self.nodeManager = try NodeManager(developerId: developerId, config: glacioConfig)
             self.realm = try Realm(configuration: Realm.Configuration(inMemoryIdentifier: "glaciolistdata-\(chainDirPath)", deleteRealmIfMigrationNeeded: true)) // We use ! here as if realm can't initialize our app won't work
 
             self.glacioCoordinator = try GlacioRealmCoordinator(realm: realm, nodeManager: nodeManager, objectsToMonitor: [ListItem.self])
